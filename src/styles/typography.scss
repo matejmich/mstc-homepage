@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&display=swap');
+$dark-grey: #494A4D;
+body {
+    header {
+        nav {
+            .menu {
+                .menu-item {
+                    list-style: none;
+                    cursor: pointer;
+                    p.menu-item-title {
+                        font-family: "League Spartan", sans-serif;
+                        font-size: 16px;
+                        font-weight: 800;
+                        color: $dark-grey;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .quote-wrapper {
+            .quote-text {
+                font-family: "Labrada", serif;
+                font-weight: 500;
+                font-style: italic;
+                font-size: 35px;
+                color: $dark-grey;
+                line-height: 43px;
+            }
+        }
+        .product-wrapper {
+            .product-box {
+                .product-icon-wrapper {
+                    .product-icon-text {
+                        font-family: "League Spartan", sans-serif;
+                        font-size: 18px;
+                        font-weight: 800;
+                        color: $dark-grey;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}

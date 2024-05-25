@@ -1,0 +1,97 @@
+@import "../node_modules/swiper/swiper-bundle.css";
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&display=swap");
+body {
+  margin: 0;
+  background-color: white;
+}
+body header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+body header nav {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 21px;
+  gap: 200px;
+}
+body header nav .menu {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 60px;
+}
+body header .quote-wrapper {
+  width: 572px;
+  height: 477px;
+  position: absolute;
+  left: 0;
+  bottom: -103px;
+}
+body header .quote-wrapper .quotes {
+  position: relative;
+  left: 50px;
+  top: 152px;
+  z-index: 2;
+}
+body header .quote-wrapper .quote-text {
+  position: relative;
+  left: 136px;
+  top: 10px;
+  max-width: 309px;
+  margin: 0;
+  z-index: 3;
+}
+body header .product-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+body header nav .menu .menu-item {
+  list-style: none;
+  cursor: pointer;
+}
+body header nav .menu .menu-item p.menu-item-title {
+  font-family: "League Spartan", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #494A4D;
+  text-transform: uppercase;
+}
+body header .quote-wrapper .quote-text {
+  font-family: "Labrada", serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 35px;
+  color: #494A4D;
+  line-height: 43px;
+}
+body header .product-wrapper .product-box .product-icon-wrapper .product-icon-text {
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #494A4D;
+  text-transform: uppercase;
+}
+
+body header {
+  background-image: url("./assets/images/Lunch.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+body header nav .logo {
+  width: 100px;
+}
+body header .quote-wrapper {
+  background-image: url("./assets/vectors/grey_quote.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=styles.css.map */

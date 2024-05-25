@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build:sass": "sass src/styles/styles.scss dist/styles.css",
+    "build:ts": "tsc",
+    "copy-swiper-css": "cp node_modules/swiper/swiper-bundle.css dist/",
+    "build": "npm run build:sass && npm run build:ts && npm run copy-swiper-css",
+    "watch:sass": "sass --watch src/styles.scss:dist/styles.css",
+    "watch:ts": "tsc --watch",
+    "start": "npm-run-all --parallel watch:sass watch:ts"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.77.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "swiper": "^11.1.3"
+  }
+}

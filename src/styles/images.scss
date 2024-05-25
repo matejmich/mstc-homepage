@@ -1,0 +1,23 @@
+body {
+    header {
+        background-image: url("./assets/images/Lunch.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        nav {
+            .logo {
+                width: 100px;
+            }
+        }
+        .quote-wrapper {
+            background-image: url("./assets/vectors/grey_quote.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            
+        }
+    }
+
+    
+} 

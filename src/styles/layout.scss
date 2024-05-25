@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background-color: white;
+    header {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+
+        position: relative;
+        nav {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            justify-content: space-between;
+            padding: 21px;
+            gap: 200px;
+            .menu {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 60px;
+            }
+        }
+        .quote-wrapper {
+            width: 572px;
+            height: 477px;
+            position: absolute;
+            left: 0;
+            bottom: -103px;
+            .quotes {
+                position: relative;
+                left: 50px;
+                top: 152px;
+                z-index: 2;
+            }
+            .quote-text {
+                position: relative;
+                left: 136px;
+                top: 10px;
+                max-width: 309px;
+                margin: 0;
+                z-index: 3;
+            }
+        }
+        .product-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+    }
+
+}
+// 74
+// 164
+// 232
+
+// 90
+// 68
