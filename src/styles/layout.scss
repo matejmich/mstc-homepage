@@ -1,6 +1,9 @@
+$yellow: #F2D630;
 body {
     margin: 0;
     background-color: white;
+    display: flex;
+    flex-direction: column;
     header {
         height: 100vh;
         display: flex;
@@ -18,6 +21,33 @@ body {
                 display: flex;
                 flex-wrap: nowrap;
                 gap: 60px;
+                .menu-item {
+                    position: relative;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  
+                    .menu-item-title {
+                      position: relative;
+                      z-index: 2; // Ensure this is above the image
+                    }
+                  
+                    .menu-item-stone {
+                      position: absolute;
+                      bottom: 0; // Align to the bottom of the title initially
+                      left: 50%;
+                      transform: translateX(-50%) translateY(100%); // Move it below the title
+                      opacity: 0; // Initially invisible
+                      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                      z-index: 1; // Ensure this is below the title
+                    }
+                  
+                    &:hover .menu-item-stone {
+                      transform: translateX(-50%) translateY(0); // Move up to its natural position
+                      opacity: 1; // Make it visible
+                    }
+                  }
             }
         }
         .quote-wrapper {
@@ -45,13 +75,116 @@ body {
             display: flex;
             justify-content: space-between;
             gap: 15px;
+            position: absolute;
+            bottom: -68px;
+            right: 100px;
+            .product-box {
+                width: 176px;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                position: relative;
+                .box-hover-yellow-box {
+                    background-color: $yellow;
+                    height: 158px;
+                    width: 176px;
+                    z-index: 2;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transition: transform 0.3s ease;
+                    transform-origin: center 54%; 
+                }
+                .box-hover-stone {
+                    position: absolute;
+                    bottom: 20px;
+                    z-index: 2;
+                    transition: transform 0.3s ease-in-out;
+                }
+                .product-icon-wrapper {
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: center;
+                    width: 130px;
+                    text-align: center;
+                    padding-bottom: 10px;
+                    z-index: 5;
+                    transition: transform 0.3s ease-in-out;
+                    
+                }
+                &:hover {
+                    .product-icon-wrapper {
+                      transform: translateY(-50px);
+                    }
+                    .box-hover-stone {
+                      transform: translateY(-60px);
+                    }
+                    .box-hover-yellow-box {
+                      transform: scaleY(0.12);
+                    }
+                  }
+            }
+        }
+    }
+
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .main-wrapper {
+            padding-top: 200px;
+            .article {
+                max-width: 705px;
+            }
+        }
+        .founder-section {
+            display: flex;
+            align-items: end;
+            position: relative;
+            z-index: 5;
+            .founder-article {
+                display: flex;
+                flex-direction: column;
+                max-width: 510px;
+                padding-left: 60px;
+                padding-right: 95px;
+                padding-bottom: 100px;
+                .founder-background {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 0;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    footer {
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+        position: relative;
+        .contact {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .copyright {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            width: 100%;
+            .copyright-text {
+                max-width: 585px;
+            }
         }
     }
 
 }
-// 74
-// 164
-// 232
-
-// 90
-// 68

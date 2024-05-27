@@ -18,6 +18,32 @@ body {
             
         }
     }
-
-    
+    main {
+        .main-background-up {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+        .founder-section {
+            .founder-image {
+                max-height: 618px;
+            }
+        }
+    }
+    footer {
+        .main-background-down {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -2;
+        }
+        .footer-background {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
 } 
