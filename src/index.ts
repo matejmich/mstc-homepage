@@ -1,8 +1,7 @@
 // import Swiper JS
+// @ts-ignore
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-// import Swiper styles
 
-//
 const swiper = new Swiper('.swiper', {
   initialSlide: 1,
     speed: 900,
