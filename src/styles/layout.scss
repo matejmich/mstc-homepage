@@ -1,6 +1,7 @@
 $yellow: #F2D630;
 body {
     margin: 0;
+    padding: 0;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -30,22 +31,22 @@ body {
                   
                     .menu-item-title {
                       position: relative;
-                      z-index: 2; // Ensure this is above the image
+                      z-index: 2;
                     }
                   
                     .menu-item-stone {
                       position: absolute;
-                      bottom: 0; // Align to the bottom of the title initially
+                      bottom: 0;
                       left: 50%;
-                      transform: translateX(-50%) translateY(100%); // Move it below the title
-                      opacity: 0; // Initially invisible
+                      transform: translateX(-50%) translateY(100%);
+                      opacity: 0;
                       transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-                      z-index: 1; // Ensure this is below the title
+                      z-index: 1;
                     }
                   
                     &:hover .menu-item-stone {
-                      transform: translateX(-50%) translateY(0); // Move up to its natural position
-                      opacity: 1; // Make it visible
+                      transform: translateX(-50%) translateY(0);
+                      opacity: 1;
                     }
                   }
             }
@@ -136,6 +137,9 @@ body {
         align-items: center;
         .main-wrapper {
             padding-top: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .article {
                 max-width: 705px;
             }
@@ -145,10 +149,11 @@ body {
             align-items: end;
             position: relative;
             z-index: 5;
+            margin: 150px;
             .founder-article {
                 display: flex;
                 flex-direction: column;
-                max-width: 510px;
+                max-width: 509px;
                 padding-left: 60px;
                 padding-right: 95px;
                 padding-bottom: 100px;
@@ -159,6 +164,114 @@ body {
                     z-index: -1;
                 }
             }
+        }
+        .story-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .tile-wrapper {
+                display: flex;
+                justify-content: center;
+                gap: 28px;
+            
+                .tile {
+                    max-width: 580px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 28px;
+                    transition: gap 0.7s ease;
+            
+                    .tile-top {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+                        align-items: center;
+            
+                        .tile-img-wrapper {
+                            position: relative;
+                            overflow: hidden;     
+                            .tile-img {
+                                position: relative;
+                                z-index: 1;
+                                display: block;
+                            }
+                            .tile-hover-stone,
+                            .tile-hover-circle {
+                                position: absolute;
+                                
+                                opacity: 1;
+                                visibility: hidden;
+                            }
+            
+                            .tile-hover-stone {
+                                z-index: 2;
+                                transform: translate(-100%, 100%);
+                                bottom: 0;
+                                left: 0;
+                                transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+                            }
+            
+                            .tile-hover-circle {
+                                z-index: 3;
+                                background-color: #FFFFFF4D;
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                transform: translate(-800%, 700%);
+                                transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+                            }
+                        }
+            
+                        .tile-products {
+                            position: relative;
+                            z-index: 1;
+                        }
+                    }
+            
+                    .tile-bot {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+                        transition: gap 0.7s ease;
+                        align-items: center;
+                    }
+            
+                    &:hover {
+                        gap: 20px;
+                    }
+            
+                    &:hover .tile-bot {
+                        gap: 10px;
+                    }
+            
+                    &:hover .tile-img-wrapper .tile-hover-stone {
+                        transform: translate(0, 0);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+            
+                    &:hover .tile-img-wrapper .tile-hover-circle {
+                        opacity: 1;
+                        visibility: visible;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            
+            
+            
+            
+            
+            
+
         }
     }
     footer {

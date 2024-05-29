@@ -6,6 +6,8 @@ $mid-grey: #7A7D85;
 $light-grey: #A3A5A8;
 $light-text: #636569;
 $custom-white: #E4E4E5;
+$tile-text: #DFE0E5;
+$tile-products: #C6C7CC;
 body {
     header {
         nav {
@@ -81,7 +83,45 @@ body {
                     color: $light-text;
                 }
 
-            }   
+            }
+            .swiper {
+                .swiper-slide {
+                    .slide-article {
+                        .slide-header {
+                            font-family: "League Spartan", sans-serif;
+                            font-weight: 800;
+                            font-size: 28px;
+                            line-height: 35px;
+                            color: $dark-grey;
+                        }
+                        .slide-text {
+                            font-family: "Labrada", serif;
+                            font-size: 18px;
+                            line-height: 27px;
+                            color: $light-text;
+                        }
+                        .slide-btn {
+                            font-family: "League Spartan", sans-serif;
+                            font-weight: 800;
+                            font-size: 15px;
+                            line-height: 13.8px;
+                            text-transform: uppercase;
+                            color: $dark-grey;
+                        }
+                    }
+                }
+                .swiper-pagination-bullet {
+                    font-family: "League Spartan", sans-serif;
+                    font-weight: 800;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: $dark-grey;
+                    text-transform: uppercase;
+                }
+                .swiper-pagination-bullet-active {
+                    color: white;
+                }
+            }
         }
         .founder-section {
             .founder-title-light {
@@ -108,6 +148,7 @@ body {
                 line-height: 30px;
                 color: $light-text;
                 margin: 0;
+                font-style: italic;
             }
         }
         .story-section {
@@ -118,6 +159,46 @@ body {
                 line-height: 32.2px;
                 color: $dark-grey;
                 text-transform: uppercase;
+            }
+            .tile {
+                .tile-top {
+                    .tile-products {
+                        font-family: "League Spartan", sans-serif;
+                        font-size: 12px;
+                        line-height: 20px;
+                        color: $tile-products;
+                        text-transform: uppercase;
+                    }
+                }
+                .tile-bot {
+                    .tile-title {
+                        font-family: "League Spartan", sans-serif;
+                        font-size: 20px;
+                        line-height: 25px;
+                        color: white;
+                        text-transform: uppercase;
+                        margin: 0;
+                        text-align: center;
+                    }
+                    .tile-text {
+                        font-family: "Labrada", serif;
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: $tile-text;
+                        margin: 0;
+                        text-align: center;
+                    }
+                }
+                
+            }
+            .story-btn {
+                font-family: "League Spartan", sans-serif;
+                font-size: 13px;
+                line-height: 11.96px;
+                font-weight: 800;
+                color: $dark-grey;
+                text-transform: uppercase;
+                text-align: center;
             }
         }
     }

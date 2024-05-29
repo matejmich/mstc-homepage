@@ -1,8 +1,8 @@
-@import "../node_modules/swiper/swiper-bundle.css";
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&display=swap");
 body {
   margin: 0;
+  padding: 0;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -131,6 +131,9 @@ body main {
 }
 body main .main-wrapper {
   padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 body main .main-wrapper .article {
   max-width: 705px;
@@ -140,11 +143,12 @@ body main .founder-section {
   align-items: end;
   position: relative;
   z-index: 5;
+  margin: 150px;
 }
 body main .founder-section .founder-article {
   display: flex;
   flex-direction: column;
-  max-width: 510px;
+  max-width: 509px;
   padding-left: 60px;
   padding-right: 95px;
   padding-bottom: 100px;
@@ -154,6 +158,94 @@ body main .founder-section .founder-article .founder-background {
   bottom: 1px;
   right: 0;
   z-index: -1;
+}
+body main .story-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .story-section .tile-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+body main .story-section .tile-wrapper .tile {
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  transition: gap 0.7s ease;
+}
+body main .story-section .tile-wrapper .tile .tile-top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+body main .story-section .tile-wrapper .tile .tile-top .tile-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+body main .story-section .tile-wrapper .tile .tile-top .tile-img-wrapper .tile-img {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+body main .story-section .tile-wrapper .tile .tile-top .tile-img-wrapper .tile-hover-stone,
+body main .story-section .tile-wrapper .tile .tile-top .tile-img-wrapper .tile-hover-circle {
+  position: absolute;
+  opacity: 1;
+  visibility: hidden;
+}
+body main .story-section .tile-wrapper .tile .tile-top .tile-img-wrapper .tile-hover-stone {
+  z-index: 2;
+  transform: translate(-100%, 100%);
+  bottom: 0;
+  left: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+}
+body main .story-section .tile-wrapper .tile .tile-top .tile-img-wrapper .tile-hover-circle {
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.3019607843);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-800%, 700%);
+  transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s ease;
+}
+body main .story-section .tile-wrapper .tile .tile-top .tile-products {
+  position: relative;
+  z-index: 1;
+}
+body main .story-section .tile-wrapper .tile .tile-bot {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: gap 0.7s ease;
+  align-items: center;
+}
+body main .story-section .tile-wrapper .tile:hover {
+  gap: 20px;
+}
+body main .story-section .tile-wrapper .tile:hover .tile-bot {
+  gap: 10px;
+}
+body main .story-section .tile-wrapper .tile:hover .tile-img-wrapper .tile-hover-stone {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
+}
+body main .story-section .tile-wrapper .tile:hover .tile-img-wrapper .tile-hover-circle {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 body footer {
   min-height: 500px;
@@ -237,6 +329,38 @@ body main .main-wrapper .article .article-text {
   line-height: 30px;
   color: #636569;
 }
+body main .main-wrapper .swiper .swiper-slide .slide-article .slide-header {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 35px;
+  color: #494A4D;
+}
+body main .main-wrapper .swiper .swiper-slide .slide-article .slide-text {
+  font-family: "Labrada", serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #636569;
+}
+body main .main-wrapper .swiper .swiper-slide .slide-article .slide-btn {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 13.8px;
+  text-transform: uppercase;
+  color: #494A4D;
+}
+body main .main-wrapper .swiper .swiper-pagination-bullet {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  color: #494A4D;
+  text-transform: uppercase;
+}
+body main .main-wrapper .swiper .swiper-pagination-bullet-active {
+  color: white;
+}
 body main .founder-section .founder-title-light {
   font-family: "Labrada", serif;
   font-weight: 500;
@@ -261,6 +385,7 @@ body main .founder-section .founder-text {
   line-height: 30px;
   color: #636569;
   margin: 0;
+  font-style: italic;
 }
 body main .story-section .story-title {
   font-family: "League Spartan", sans-serif;
@@ -269,6 +394,39 @@ body main .story-section .story-title {
   line-height: 32.2px;
   color: #494A4D;
   text-transform: uppercase;
+}
+body main .story-section .tile .tile-top .tile-products {
+  font-family: "League Spartan", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #C6C7CC;
+  text-transform: uppercase;
+}
+body main .story-section .tile .tile-bot .tile-title {
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+body main .story-section .tile .tile-bot .tile-text {
+  font-family: "Labrada", serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #DFE0E5;
+  margin: 0;
+  text-align: center;
+}
+body main .story-section .story-btn {
+  font-family: "League Spartan", sans-serif;
+  font-size: 13px;
+  line-height: 11.96px;
+  font-weight: 800;
+  color: #494A4D;
+  text-transform: uppercase;
+  text-align: center;
 }
 body footer .contact-title {
   font-family: "League Spartan", sans-serif;
@@ -331,6 +489,9 @@ body main .main-background-up {
 body main .founder-section .founder-image {
   max-height: 618px;
 }
+body main .story-section .tile-wrapper .tile .tile-top .tile-img {
+  max-width: 580px;
+}
 body footer .main-background-down {
   width: 100%;
   position: absolute;
@@ -344,6 +505,94 @@ body footer .footer-background {
   bottom: 0;
   left: 0;
   z-index: -1;
+}
+
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide .slide-article .slide-btn {
+  padding: 27px 55px 25px 55px;
+  background-color: #F2D630;
+  border: none;
+  width: fit-content;
+}
+body main .story-section .story-btn {
+  padding: 22px 35px 20px 35px;
+  background-color: #F2D630;
+  border: none;
+  margin: 45px;
+}
+
+.swiper {
+  width: 100vw;
+  height: 693px;
+}
+.swiper .swiper-wrapper {
+  overflow: visible;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.swiper .swiper-wrapper .swiper-slide .slide-img-left,
+.swiper .swiper-wrapper .swiper-slide .slide-img-right {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.7s ease;
+}
+.swiper .swiper-wrapper .swiper-slide .slide-img-left {
+  left: 0;
+}
+.swiper .swiper-wrapper .swiper-slide .slide-img-right {
+  right: 0;
+}
+.swiper .swiper-wrapper .swiper-slide .slide-article {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-width: 475px;
+  max-height: 342px;
+}
+.swiper .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.swiper .swiper-pagination-bullet {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0;
+  margin: 0 5px;
+  padding: 0 30px;
+  background-color: #E4E4E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  opacity: 1;
+  height: 49px;
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+.swiper .swiper-pagination-bullet-active {
+  background-color: #494A4D;
+  cursor: auto !important;
+  height: 62px;
+}
+.swiper .first-slide.swiper-pagination-bullet:not(.swiper-pagination-bullet-active)::before {
+  content: url("./assets/vectors/left_arrow.svg");
+}
+.swiper .second-slide.swiper-pagination-bullet:not(.swiper-pagination-bullet-active)::after {
+  content: url("./assets/vectors/right_arrow.svg");
+}
+.swiper .swiper-container {
+  width: 80%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

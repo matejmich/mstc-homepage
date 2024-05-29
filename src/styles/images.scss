@@ -29,6 +29,17 @@ body {
                 max-height: 618px;
             }
         }
+        .story-section {
+            .tile-wrapper {
+                .tile {
+                    .tile-top {
+                        .tile-img {
+                            max-width: 580px;
+                        }
+                    }
+                }
+            }
+        }
     }
     footer {
         .main-background-down {
