@@ -77,7 +77,7 @@ body header .product-wrapper {
   gap: 15px;
   position: absolute;
   bottom: -68px;
-  right: 100px;
+  right: 6%;
 }
 body header .product-wrapper .product-box {
   width: 176px;
@@ -137,6 +137,105 @@ body main .main-wrapper {
 }
 body main .main-wrapper .article {
   max-width: 705px;
+}
+body main .main-wrapper .swiper {
+  width: 100vw;
+  height: 693px;
+  position: relative;
+  overflow: hidden;
+  margin: 80px 0 50px 0;
+}
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  position: relative;
+}
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide .slide-img-left,
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide .slide-img-right {
+  width: 50%;
+  transition: transform 0.7s ease;
+  position: absolute;
+}
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide .slide-img-left {
+  left: 0;
+}
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide .slide-img-right {
+  right: 0;
+}
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide .slide-article {
+  position: absolute;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-width: 475px;
+  max-height: 342px;
+  z-index: 5;
+}
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide .left {
+  right: 20%;
+}
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide .right {
+  left: 20%;
+}
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide:not(.swiper-slide-fully-visible) {
+  opacity: 0.5;
+}
+body main .main-wrapper .swiper .swiper-wrapper .swiper-slide:not(.swiper-slide-fully-visible) .slide-img-left, body main .main-wrapper .swiper .swiper-wrapper .swiper-slide:not(.swiper-slide-fully-visible) .slide-img-right {
+  filter: grayscale(100%);
+}
+body main .main-wrapper .swiper .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  z-index: 1000;
+}
+body main .main-wrapper .swiper .swiper-pagination-bullet {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0;
+  margin: 0 5px;
+  padding: 0 30px;
+  background-color: #E4E4E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  opacity: 1;
+  height: 49px;
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+body main .main-wrapper .swiper .swiper-pagination-bullet-active {
+  background-color: #494A4D;
+  cursor: auto !important;
+  height: 62px;
+}
+body main .main-wrapper .swiper .first-slide.swiper-pagination-bullet:not(.swiper-pagination-bullet-active)::before {
+  content: url("./assets/vectors/left_arrow.svg");
+}
+body main .main-wrapper .swiper .second-slide.swiper-pagination-bullet:not(.swiper-pagination-bullet-active)::after {
+  content: url("./assets/vectors/right_arrow.svg");
+}
+body main .main-wrapper .swiper .swiper-container {
+  width: 80%;
+  margin: auto;
+}
+body main .main-wrapper .swiper .swiper-button-next, body main .main-wrapper .swiper .swiper-button-prev {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #F2D630;
+}
+body main .main-wrapper .swiper .swiper-button-next::after, body main .main-wrapper .swiper .swiper-button-prev::after {
+  content: none;
 }
 body main .founder-section {
   display: flex;
@@ -246,6 +345,23 @@ body main .story-section .tile-wrapper .tile:hover .tile-img-wrapper .tile-hover
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+body main .story-section .story-btn {
+  position: relative;
+  overflow: hidden;
+}
+body main .story-section .story-btn .story-btn-stone {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  transform: translateX(-100%) translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+body main .story-section .story-btn:hover .story-btn-stone {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
 }
 body footer {
   min-height: 500px;
@@ -518,81 +634,6 @@ body main .story-section .story-btn {
   background-color: #F2D630;
   border: none;
   margin: 45px;
-}
-
-.swiper {
-  width: 100vw;
-  height: 693px;
-}
-.swiper .swiper-wrapper {
-  overflow: visible;
-}
-.swiper .swiper-wrapper .swiper-slide {
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-.swiper .swiper-wrapper .swiper-slide .slide-img-left,
-.swiper .swiper-wrapper .swiper-slide .slide-img-right {
-  width: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.7s ease;
-}
-.swiper .swiper-wrapper .swiper-slide .slide-img-left {
-  left: 0;
-}
-.swiper .swiper-wrapper .swiper-slide .slide-img-right {
-  right: 0;
-}
-.swiper .swiper-wrapper .swiper-slide .slide-article {
-  width: 50%;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: transform 0.7s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  max-width: 475px;
-  max-height: 342px;
-}
-.swiper .swiper-pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-.swiper .swiper-pagination-bullet {
-  width: fit-content;
-  height: fit-content;
-  border-radius: 0;
-  margin: 0 5px;
-  padding: 0 30px;
-  background-color: #E4E4E5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  opacity: 1;
-  height: 49px;
-  transition: background-color 0.3s ease, height 0.3s ease;
-}
-.swiper .swiper-pagination-bullet-active {
-  background-color: #494A4D;
-  cursor: auto !important;
-  height: 62px;
-}
-.swiper .first-slide.swiper-pagination-bullet:not(.swiper-pagination-bullet-active)::before {
-  content: url("./assets/vectors/left_arrow.svg");
-}
-.swiper .second-slide.swiper-pagination-bullet:not(.swiper-pagination-bullet-active)::after {
-  content: url("./assets/vectors/right_arrow.svg");
-}
-.swiper .swiper-container {
-  width: 80%;
-  margin: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
