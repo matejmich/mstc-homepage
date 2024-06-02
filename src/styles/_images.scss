@@ -9,6 +9,24 @@ body {
             .logo {
                 width: 100px;
             }
+            .menu {
+                .dropdown-item {
+                    .dropdown {
+                        .dropdown-bg {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            z-index: -1;
+                        }
+                        .dropdown-upper-bg {
+                            position: absolute;
+                            left: 46%;
+                            top: -5%;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
         }
         .quote-wrapper {
             background-image: url("./assets/vectors/grey_quote.svg");
@@ -17,6 +35,7 @@ body {
             background-size: cover;
             
         }
+        
     }
     main {
         .main-background-up {
@@ -27,6 +46,12 @@ body {
         .founder-section {
             .founder-image {
                 max-height: 618px;
+                max-width: 100%;
+            }
+            .founder-quotes {
+                position: absolute;
+                bottom: 10%;
+                left: 42%;
             }
         }
         .story-section {
@@ -34,7 +59,7 @@ body {
                 .tile {
                     .tile-top {
                         .tile-img {
-                            max-width: 580px;
+                            max-width: 100%;
                         }
                     }
                 }

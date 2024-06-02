@@ -1,0 +1,38 @@
+footer {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    position: relative;
+    .contact {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 35px;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: default;
+        }
+    }
+    .copyright {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        width: 100%;
+        .copyright-text {
+            max-width: 585px;
+        }
+    }
+}
+@media (max-width: 500px) {
+    footer {
+        background-color: $dark-grey;
+        .contact {
+            gap: 10px;
+        }
+    }
+}

@@ -26,3 +26,20 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.swiper-button-prev',
     },
   });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const dropdowns: NodeListOf<HTMLElement> = document.querySelectorAll('.dropdown-item');
+    dropdowns.forEach(dropdown => {
+      dropdown.addEventListener('click', function(event: Event) {
+        event.stopPropagation();
+        dropdown.classList.toggle('active')
+    })})
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function (event: Event) {
+            event.stopPropagation();
+            const dropdownContent = this.querySelector('.dropdown') as HTMLElement;
+            dropdownContent.classList.toggle('show');
+        });
+    });
+});

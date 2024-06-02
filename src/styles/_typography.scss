@@ -1,34 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&display=swap');
-$dark-grey: #494A4D;
-$dark-grey-hover: #18191A;
-$mid-grey: #7A7D85;
-$light-grey: #A3A5A8;
-$light-text: #636569;
-$custom-white: #E4E4E5;
-$tile-text: #DFE0E5;
-$tile-products: #C6C7CC;
+
 body {
     header {
         nav {
             .menu {
                 .menu-item {
                     list-style: none;
-                    cursor: pointer;
-                    height: 30px;
-
                     .menu-item-title {
                         font-family: "League Spartan", sans-serif;
-                        font-size: 16px;
+                        font-size: 1rem; // 16px
                         font-weight: 800;
                         color: $dark-grey;
                         text-transform: uppercase;
                         margin: 0;
                         margin-block-start: 0;
                         margin-block-end: 0;
+                        text-wrap: nowrap;
                     }
                     &:hover .menu-item-title {
                         color: $dark-grey-hover;
+                    }
+                    .dropdown {
+                        .dropdown-ul {
+                            list-style: none;
+                            .dropwdown-header {
+                                font-family: "League Spartan", sans-serif;
+                                font-weight: 800;
+                                text-transform: uppercase;
+                                color: white;
+                                padding-bottom: 1rem;
+                                margin-left: 0;
+                                transition: margin-left 0.3s ease;
+                                &::after {
+                                    content: url("./assets/vectors/dropdown_header_arrow.svg");
+                                    margin-left: 1rem;
+                                    transition: margin-left 0.3s ease;
+                                }
+                                &:hover {
+                                    margin-left: 1rem;
+                                    color: $tile-text;
+                                    &::after {
+                                        margin-left: 0.5rem;
+                                    }
+                                }
+                            }
+                            .dropdown-li {
+                                font-family: "League Spartan", sans-serif;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                color: $tile-text;
+                                font-size: 0.75rem; // 12px
+                                position: relative;
+                                padding: 0.5rem;
+                                transition: padding-left 0.3s ease;
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: -0.5rem;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 4px;
+                                    height: 4px;
+                                    background-color: $yellow;
+                                    transition: left 0.3s ease;
+                                }
+                                &:hover {
+                                    padding-left: 0.1rem;
+                                    color: white;
+                                    &::before {
+                                        left: -0.7rem;
+                                    }
+                                }
+                            }
+                            
+                        }
                     }
                 }
             }
@@ -38,9 +84,9 @@ body {
                 font-family: "Labrada", serif;
                 font-weight: 500;
                 font-style: italic;
-                font-size: 35px;
+                font-size: 2.2rem; // 35.2px
                 color: $dark-grey;
-                line-height: 43px;
+                line-height: 2.6875rem; // 43px
             }
         }
         .product-wrapper {
@@ -48,7 +94,7 @@ body {
                 .product-icon-wrapper {
                     .product-icon-text {
                         font-family: "League Spartan", sans-serif;
-                        font-size: 18px;
+                        font-size: 1.125rem; // 18px
                         font-weight: 800;
                         color: $dark-grey;
                         text-transform: uppercase;
@@ -64,25 +110,24 @@ body {
                 .article-title-light {
                     font-family: "Labrada", serif;
                     font-weight: 500;
-                    font-size: 30px;
-                    line-height: 30px;
+                    font-size: 1.875rem; // 30px
+                    line-height: 1.875rem; // 30px
                     color: $dark-grey;
                 }
                 .article-title-bold {
                     font-family: "League Spartan", sans-serif;
                     font-weight: 800;
-                    font-size: 35px;
-                    line-height: 32.2px;
+                    font-size: 2.188rem; // 35px
+                    line-height: 2.0125rem; // 32.2px
                     color: $dark-grey;
                 }
                 .article-text {
                     font-family: "Labrada", serif;
                     font-weight: 400;
-                    font-size: 22px;
-                    line-height: 30px;
+                    font-size: 1.375rem; // 22px
+                    line-height: 1.875rem; // 30px
                     color: $light-text;
                 }
-
             }
             .swiper {
                 .swiper-slide {
@@ -90,21 +135,21 @@ body {
                         .slide-header {
                             font-family: "League Spartan", sans-serif;
                             font-weight: 800;
-                            font-size: 28px;
-                            line-height: 35px;
+                            font-size: 1.75rem; // 28px
+                            line-height: 2.1875rem; // 35px
                             color: $dark-grey;
                         }
                         .slide-text {
                             font-family: "Labrada", serif;
-                            font-size: 18px;
-                            line-height: 27px;
+                            font-size: 1.125rem; // 18px
+                            line-height: 1.6875rem; // 27px
                             color: $light-text;
                         }
                         .slide-btn {
                             font-family: "League Spartan", sans-serif;
                             font-weight: 800;
-                            font-size: 15px;
-                            line-height: 13.8px;
+                            font-size: 0.938rem; // 15px
+                            line-height: 0.8625rem; // 13.8px
                             text-transform: uppercase;
                             color: $dark-grey;
                         }
@@ -113,8 +158,8 @@ body {
                 .swiper-pagination-bullet {
                     font-family: "League Spartan", sans-serif;
                     font-weight: 800;
-                    font-size: 12px;
-                    line-height: 15px;
+                    font-size: 0.75rem; // 12px
+                    line-height: 0.9375rem; // 15px
                     color: $dark-grey;
                     text-transform: uppercase;
                 }
@@ -127,16 +172,16 @@ body {
             .founder-title-light {
                 font-family: "Labrada", serif;
                 font-weight: 500;
-                font-size: 25px;
-                line-height: 30px;
+                font-size: 1.563rem; // 25px
+                line-height: 1.875rem; // 30px
                 color: $dark-grey;
                 margin: 0;
             }
             .founder-title-bold {
                 font-family: "League Spartan", sans-serif;
                 font-weight: 800;
-                font-size: 28px;
-                line-height: 25.76px;
+                font-size: 1.75rem; // 28px
+                line-height: 1.61rem; // 25.76px
                 color: $dark-grey;
                 text-transform: uppercase;
                 margin-top: 10px;
@@ -144,8 +189,8 @@ body {
             }
             .founder-text {
                 font-family: "Labrada", serif;
-                font-size: 20px;
-                line-height: 30px;
+                font-size: 1.25rem; // 20px
+                line-height: 1.875rem; // 30px
                 color: $light-text;
                 margin: 0;
                 font-style: italic;
@@ -155,17 +200,18 @@ body {
             .story-title {
                 font-family: "League Spartan", sans-serif;
                 font-weight: 800;
-                font-size: 35px;
-                line-height: 32.2px;
+                font-size: 2.188rem; // 35px
+                line-height: 2.0125rem; // 32.2px
                 color: $dark-grey;
                 text-transform: uppercase;
+                text-align: center;
             }
             .tile {
                 .tile-top {
                     .tile-products {
                         font-family: "League Spartan", sans-serif;
-                        font-size: 12px;
-                        line-height: 20px;
+                        font-size: 0.75rem; // 12px
+                        line-height: 1.25rem; // 20px
                         color: $tile-products;
                         text-transform: uppercase;
                     }
@@ -173,8 +219,8 @@ body {
                 .tile-bot {
                     .tile-title {
                         font-family: "League Spartan", sans-serif;
-                        font-size: 20px;
-                        line-height: 25px;
+                        font-size: 1.25rem; // 20px
+                        line-height: 1.5625rem; // 25px
                         color: white;
                         text-transform: uppercase;
                         margin: 0;
@@ -182,8 +228,8 @@ body {
                     }
                     .tile-text {
                         font-family: "Labrada", serif;
-                        font-size: 18px;
-                        line-height: 24px;
+                        font-size: 1.125rem; // 18px
+                        line-height: 1.5rem; // 24px
                         color: $tile-text;
                         margin: 0;
                         text-align: center;
@@ -193,8 +239,8 @@ body {
             }
             .story-btn {
                 font-family: "League Spartan", sans-serif;
-                font-size: 13px;
-                line-height: 11.96px;
+                font-size: 0.8125rem; // 13px
+                line-height: 0.7475rem; // 11.96px
                 font-weight: 800;
                 color: $dark-grey;
                 text-transform: uppercase;
@@ -202,30 +248,27 @@ body {
             }
         }
     }
-
-
-
     footer {
         .contact-title {
             font-family: "League Spartan", sans-serif;
             font-weight: 800;
-            font-size: 22px;
-            line-height: 20.24px;
+            font-size: 1.375rem; // 22px
+            line-height: 1.265rem; // 20.24px
             color: white;
             text-transform: uppercase;
         }
         .contact {
             .vl {
                 border-left: 1px solid $mid-grey;
-                height: 36px;
+                height: 2.25rem; // 36px
             }
             a {
                 text-decoration: none;
                 .contact-spec {
                     font-family: "League Spartan", sans-serif;
                     font-weight: 600;
-                    font-size: 18px;
-                    line-height: 16.56px;
+                    font-size: 1.125rem; // 18px
+                    line-height: 1.035rem; // 16.56px
                     color: white;
                 }
             }
@@ -233,16 +276,16 @@ body {
         .location {
             font-family: "Labrada", serif;
             font-weight: 400;
-            font-size: 16px;
-            line-height: 30px;
+            font-size: 1rem; // 16px
+            line-height: 1.875rem; // 30px
             color: $custom-white;
         }
         .copyright {
             .copyright-text {
                 font-family: "Labrada", serif;
                 font-weight: 400;
-                font-size: 14px;
-                line-height: 25px;
+                font-size: 0.875rem; // 14px
+                line-height: 1.5625rem; // 25px
                 color: $light-grey;
                 text-align: center;
             }

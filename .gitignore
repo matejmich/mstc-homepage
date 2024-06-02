@@ -1,0 +1,7 @@
+# Node modules directory
+node_modules/
+
+# Build output files
+index.js
+styles.css
+styles.css.map

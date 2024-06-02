@@ -25,3 +25,19 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdowns = document.querySelectorAll('.dropdown-item');
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function (event) {
+            event.stopPropagation();
+            dropdown.classList.toggle('active');
+        });
+    });
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function (event) {
+            event.stopPropagation();
+            const dropdownContent = this.querySelector('.dropdown');
+            dropdownContent.classList.toggle('show');
+        });
+    });
+});
